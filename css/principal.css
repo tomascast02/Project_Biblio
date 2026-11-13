@@ -1,0 +1,566 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #D7E3E1;
+}
+
+/* --- HEADER --- */
+.header {
+    background-color: #123C36;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; 
+    top: 0;
+    z-index: 4000;
+    width: 100%;
+    position: relative; 
+}
+.logo__a {
+    text-decoration: none;
+    color: white;
+    font-size: 35px;
+    font-family: 'Lora', serif;
+    z-index: 200;
+}
+
+/* --- NAVEGACION --- */
+.header__open-nav-button {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4100;
+    cursor: pointer;
+}
+.menu-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.header__nav {
+    display: none;
+}
+.nav-checkbox {
+    display: none;
+}
+.nav-checkbox:checked ~ .header__nav {
+    display: flex;
+    background-color: #123C36;
+    position: fixed;
+    height: calc(100vh - 60px);
+    width: 100vw;
+    top: 60px;
+    left: 0;
+    z-index: 3500;              
+    overflow-y: auto;
+}
+.nav__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    height: 40vh;
+    font-family: Arial, sans-serif;
+    justify-content: space-around;
+}
+.list-item, .list-item-1 {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.list-item-1 {
+    font-family: 'Lora', serif;
+    font-weight: bold;
+    background-color: #1D6B5C;
+    padding: 15px 60px;
+    border-radius: 10px;
+}
+
+/* --- MAIN CARROUSEL --- */
+.carousel-wrapper {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    z-index: 1;
+}
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+}
+.carousel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.carousel-track::-webkit-scrollbar {
+    display: none;
+}
+.carousel-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    width: 100%;
+}
+.carousel-slide img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background-position: center;
+    display: block;
+}
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    border: none;
+    font-size: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 10;
+}
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.05);
+}
+.carousel-btn.left {
+    left: 12px;
+}
+.carousel-btn.right {
+    right: 12px; 
+}
+
+/* --- MAIN CTA BUSQUEDA --- */
+.buscador__container {
+    position: relative;
+}
+.input-buscar {
+    width: 90%;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    margin: 15px;
+    height: 47px;
+}
+.buscador-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 47px;
+    height: 47px;
+    background-color: #1D6B5C;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buscador-icon {
+    width: 27px;
+    height: 27px;
+}
+.web-buscar {
+    display: none;
+}
+
+/* --- MAIN CTA BOTONES --- */
+.CTAs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+.cta__a {
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #1D6B5C;
+    color: white;
+    text-decoration: none;
+    width: 90%;
+    min-height: 50px;
+    margin: 10px 0;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+/* --- MAIN LIBROS DESTACADOS --- */
+.section__libros, .section__news {
+    background-color: white;
+    width: 92%;
+    margin: auto;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+h2 {
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+.libros__grid {
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+}
+.grid__item {
+    background-color: #E4F1EE;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.grid__item--catalogo {
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    font-size: 10px;
+    display: none;
+}
+.close-btn {
+    display: none;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: transparent;
+    border: none;
+    width: 24px;
+    height: 24px;
+    font-size: 20px;
+    color: #1D6B5C;
+    cursor: pointer;
+    z-index: 5;
+}
+.grid-libro {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.titulo-libro, .desc-libro {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+}
+.titulo-libro {
+    align-content: center;
+}
+.item__img, .item__info {
+    width: 50%;
+    height: 100%;
+    display: flex;
+}
+.desc-libro {
+    padding-top: 10px;
+    display: none;
+}
+.grid__item.expanded {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    .desc-libro{
+        display: block;
+    }
+    .item__info{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .close-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.libros__grid:has(.grid__item.expanded) .grid__item--catalogo {
+    display: flex;
+}
+
+/* --- MAIN NOTICIAS DESTACADAS --- */
+
+.noticia-1, .noticia-2{
+    margin: 15px 0;
+    width: 100%;
+    height: 150px;
+    background-color: #E4F1EE;
+    border-radius: 10px;
+    display: flex;
+}
+.noticia-1__img, .noticia-2__img{
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+}
+.noticia2__desc, .noticia1__desc{
+    width: 50%;
+    font-family: Arial, serif;
+    font-size: 12px;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    align-content: center;
+}
+h3{
+    font-family: 'Lora';
+}
+.noticia1__a, .noticia2__a{
+    color:#1D6B5C;
+}
+.contenedor__a{
+    width: 130px;
+    margin: auto;
+    color:#1D6B5C;
+}
+.noticias__a{
+    font-family: Arial, sans-serif;
+    color:#1D6B5C;
+    text-align: center;
+}
+.img__not2, .img__not1{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* ---  FOOTER --- */
+
+footer{
+    background-color: #123C36;
+    display:flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.footer__logo{
+    margin: auto;
+}
+.footer__redes{
+    margin: auto;
+    padding: 20px 0;
+}
+.redes{
+    width: 31px;
+    height: 31px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+ol{
+    list-style: none;
+}
+ol>li{
+    padding-bottom: 20px;
+}
+h6{
+    color: white;
+    font-family: 'Lora';
+    font-size: 15px;
+    padding-bottom: 15px;
+}
+.footer-a{
+    color: white;
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 15px;
+}
+.info-container{
+    display: flex;
+}
+.info__a2, .info__a3{
+    width: 50%;
+}
+
+/* --- PAGINA 404 --- */
+
+.titulo-aviso{
+    font-size: 30px;
+    padding-top: 30px;
+}
+.texto-aviso{
+    font-family: Arial;
+    font-size: 15px;
+    text-align: center;
+    padding: 30px 80px;
+}
+.contenedor__img-herramienta{
+    height: 80px;
+    width: 80px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.img-herramienta{
+    width: 100%;
+    height: 100%;
+}
+
+/* --- MEDIA QUERIES --- */
+
+@media (min-width: 500px){
+    .input-buscar{
+        width: 93%;
+    }
+}
+
+@media (min-width: 768px){
+
+    /* --- HEADER --- */
+
+    .logo__a{
+        font-size: 25px;
+    }
+    
+    /* --- NAVEGACION --- */
+
+    .header__nav{
+    display: block;
+    }
+
+    .nav-checkbox, .header__open-nav-button{
+        display: none;
+    }
+    .nav__bar{
+        display: block;
+        display: flex;
+    }
+    .nav__list{
+        flex-direction: row-reverse;
+        height: 100%;
+    }
+    .list-item, .list-item-1{
+        margin: 0 10px;
+        font-size: 15px;
+    }
+    .list-item-1{
+        padding: 10px 40px;
+    }
+    .list-item-1:hover{
+        background-color:#297e6d;
+    }
+
+    /* --- CAROUSEL --- */
+
+    .carousel-slide img{
+        height: 360px;
+    }
+
+    /* --- BUSQUEDA --- */
+
+    .buscador__input{
+        width: 60%;
+        margin: auto;
+        display: flex;
+        position: relative;
+    }
+    .input-buscar{
+        width: 100%;
+    }
+    .buscador-icon{
+        display: none;
+    }
+    .web-buscar{
+        display:block;
+        font-family: 'Lora';
+        font-weight: bold;
+        color: white;
+    }
+    .buscador-button{
+        width: 120px;
+        position: absolute;
+    }
+
+    /* --- CTA ---*/
+
+    .CTAs{
+        width: 80%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .cta__a{
+        padding-top: 15px;
+        font-size: 12px;
+        width: 23%;
+    }
+
+    /* --- LIBROS DESTACADOS --- */
+
+    .section__libros, .section__news{
+        width: 80%;
+    }
+    .libros__grid{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+    }
+    .titulo-libro, .desc-libro{
+        font-size: 15px;
+    }
+    .grid__item>a{
+        font-size: 15px;
+    }
+
+    /* --- NOTICIAS DESTACADAS --- */
+
+    .news__container{
+        display: flex;
+        flex-direction: row;
+        height: 200px;
+    }
+    .noticia-1, .noticia-2{
+        width: 50%;
+        margin: 0 10px;
+        height: 100%;
+    }
+    .contenedor__a{
+        margin-top: 10px;
+    }
+
+    /* --- FOOTER --- */
+
+    .footer__info{
+        margin: auto;
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .info__a2, .info__a3{
+        width: 100%;
+    }
+    .info__a{
+        width:25%;
+    }
+
+    /* --- PAGINA 404 --- */
+
+    .contenedor__img-herramienta{
+        margin-bottom: 44px;
+    }
+
+}
