@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblio</title>
+    <link rel="stylesheet" href="/css/principal.css">
+    <script src="/javascript/principal.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/imagenes/iconos/icono.jpeg">
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <h1><a href="principal.html" class="logo__a">Biblio</a></h1>
+        </div>
+        <input type="checkbox" id="open-menu" class="nav-checkbox">
+        <label for="open-menu" class="header__open-nav-button" aria-label="Abrir menú de navegación">
+            <image src="/imagenes/iconos/menu.png" alt="Menu" class="menu-icon" aria-hidden="true">
+        </label>
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <li><a href="/html/404.html" class="list-item-1">Inicia Sesion</a></li>
+                <li><a href="/html/404.html" class="list-item">Catalogo</a></li>
+                <li><a href="/html/404.html" class="list-item">Eventos</a></li>
+                <li><a href="/html/404.html" class="list-item">Ayuda</a></li>
+                <li><a href="/html/404.html" class="list-item">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="main__carrousel">
+            <div class="carousel-wrapper">
+                <button id="prevBtn" class="carousel-btn left" aria-label="Imagen anterior">❮</button>
+                <div class="carousel-container">
+                    <div class="carousel-track" id="track">
+                        <div class="carousel-slide">
+                            <img src="/imagenes/carrusel/Carrusel_Logo.jpg" alt="Logo de la biblioteca Biblio en pantalla destacada">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="/imagenes/carrusel/Carrusel_IA.jpg" alt="Banner sobre inteligencia artificial y libros">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="/imagenes/carrusel/Carrusel_Santi.jpg" alt="Promoción de charla especial con Santi Talledo">
+                        </div>
+                    </div>
+                </div>
+                <button id="nextBtn" class="carousel-btn right" aria-label="Siguiente Imagen">❯</button>
+            </div>
+        </section>
+        <section class="section__actions">
+            <article class="buscador__container">
+                <form class="buscador__input">
+                    <input type="text" id="searchInput" placeholder="¿Que libro desea buscar?" class="input-buscar" aria-label="Buscar libro en el catálogo">
+                    <button type="submit" class="buscador-button" aria-label="Realizar búsqueda">
+                        <img src="/imagenes/iconos/search.png" alt="" class="buscador-icon" aria-hidden="true">
+                        <span class="web-buscar">Buscar</span>
+                    </button>
+                </form>
+            </article>
+            <article class="CTAs">
+                <a href="/html/404.html" class="cta__a">Catalogo</a>
+                <a href="/html/404.html" class="cta__a">Sedes y Horarios</a>
+                <a href="/html/404.html" class="cta__a">Hazte Socio</a>
+                <a href="/html/404.html" class="cta__a">Noticias</a>
+            </article>
+        </section>
+        <section class="section__libros">
+            <h2>Libros Destacados</h2>
+            <article class="libros__grid">
+                <div class="grid__item">
+                    <button class="close-btn" aria-label="Cerrar detalles del libro">✕</button>
+                    <div class="item__img">
+                        <img src="/imagenes/libros destacados/cero miligramos.webp" alt="Portada del libro Cero Miligramos" class="grid-libro">
+                    </div>
+                    <div class="item__info">
+                        <p class="titulo-libro">Cero Miligramos</p>
+                        <p class="desc-libro">Con una narrativa honesta y momentos de humor que iluminan incluso los episodios más oscuros, Cero Miligramos es un relato conmovedor sobre el crecimiento personal, la aceptación de uno mismo y el poder transformador del arte y los vínculos profundos. Esta novela invita a reflexionar, reír y emocionarse, recordándonos que siempre puede haber una salida, incluso en los momentos más difíciles.</p>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <button class="close-btn" aria-label="Cerrar detalles del libro">✕</button>
+                    <div class="item__img">
+                        <img src="/imagenes/libros destacados/sofi calvo libro.webp" alt="Portada del libro La vida después de entender la ansiedad" class="grid-libro">
+                    </div>
+                    <div class="item__info">
+                        <p class="titulo-libro">La vida despues de entender la ansiedad</p>
+                        <p class="desc-libro">A partir de su experiencia como psicóloga y de una búsqueda personal, Sofía Calvo propone una manera distinta de pensar la ansiedad: dejar de verla como una enemiga para reconocerla como una señal que merece ser escuchada. Una reflexión sobre el malestar de nuestro tiempo para dejar de confundir sobrevivir con vivir.</p>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <button class="close-btn" aria-label="Cerrar detalles del libro">✕</button>
+                    <div class="item__img">
+                        <img src="/imagenes/libros destacados/los juegos del hambre.webp" alt="Portada del libro Los Juegos del Hambre: Amanecer en la cosecha" class="grid-libro">
+                    </div>
+                    <div class="item__info">
+                        <p class="titulo-libro">Los Juegos del Hambre: Amanecer en la cosecha</p>
+                        <p class="desc-libro">En el Distrito 12, Haymitch Abernathy intenta no pensar demasiado en sus probabilidades. Lo único que le importa es que se acabe el día para poder estar con su chica. Cuando anuncian el nombre de Haymitch, todos sus sueños se rompen en pedazos. Lo separan de su familia y de su amada, y lo envían al Capitolio con los otros tres tributos del Distrito 12: una amiga que es casi como una hermana pequeña para él, un chico obsesionado con analizar apuestas y la chica más estirada de la ciudad. Cuando empiezan los Juegos, Haymitch comprende que en el Capitolio quieren que fracase. Sin embargo, algo dentro de él desea luchar… y que el eco de esa lucha llegue mucho más allá de la mortífera arena.</p>
+                    </div>
+                </div>
+                <div class="grid__item">
+                    <button class="close-btn" aria-label="Cerrar detalles del libro">✕</button>
+                    <div class="item__img">
+                        <img src="/imagenes/libros destacados/heartstopper 6.webp" alt="Portada del libro Heartstopper: Volume 6" class="grid-libro">
+                    </div>
+                    <div class="item__info">
+                        <p class="titulo-libro">Heartstopper Volume 6</p>
+                        <p class="desc-libro">Todo el mundo en la escuela conoce a Nick y Charlie. Todos saben que estaran juntos por siempre. Pero Charlie esta ocupado en su campaa para ser delegado. Y, mientras Nick se prepara para ir a la universidad, comienza a preguntarse quien sera el sin su novio… Este es el sexto y ultimo tomo de Heartstopper, el bestseller con millones de copias vendidas. Por la Alice Oseman.</p>
+                    </div>
+                </div>
+                <div class="grid__item grid__item--catalogo">
+                    <a href="/html/404.html" class="noticias__a">Ir al catalogo completo</a>
+                </div>
+            </article>
+        </section>
+        <section class="section__news">
+            <h2>Noticias Destacadas</h2>
+            <div class="news__container">
+                <article class="noticia-1">
+                    <div class="noticia-1__img">
+                        <img src="/imagenes/noticias/biblioteca moderna.webp" alt="Interior moderno de la nueva sede de la biblioteca" class="img__not1">
+                    </div>
+                    <div class="noticia1__desc">
+                        <h3>Nueva sede abierta!</h3>
+                        <p>Veni a conocer nuestra nueva sede que abrio en Yerba Buena</p>
+                        <a href="/404.html" class="noticia1__a">Leer mas...</a>
+                    </div>
+                </article>
+                <article class="noticia-2">
+                    <div class="noticia-2__img">
+                        <img src="/imagenes/noticias/santitalledo.png" alt="Santi Talledo dando una charla" class="img__not2">
+                    </div>
+                    <div class="noticia2__desc">
+                        <h3>Charla: Salud mental</h3>
+                        <p>Santi Talledo se acercara a nuestra biblioteca a contarnos sobre su vision y experiencia con la salud mental</p>
+                        <a href="/html/404.html" class="noticia2__a">Leer mas...</a>
+                    </div>
+                </article>
+            </div>
+            <div class="contenedor__a">
+                <a href="/html/404.html" class="noticias__a">Leer mas noticias</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer__logo">
+            <img src="/imagenes/iconos/logo-footer.png" alt="Logotipo institucional de Biblio">
+        </div>
+        <div class="footer__redes">
+                <img src="/imagenes/redes/facebook_logo(white).png" alt="Logotipo deFacebook" class="redes">
+                <img src="/imagenes/redes/X_logo(white).png" alt="Logotipo de X" class="redes">
+                <img src="/imagenes/redes/instagram_logo(white).png" alt="Logotipo de Instagram" class="redes">
+                <img src="/imagenes/redes/tiktok_logo(white).png" alt="Logotipo de Tiktok" class="redes">
+        </div>
+        <div class="footer__info">
+            <div class="info__a">
+                <ol>
+                    <li><a href="/html/404.html" class="footer-a">Contactanos</a></li>
+                    <li><a href="/html/404.html" class="footer-a">Como llegar</a></li>
+                    <li><a href="/html/404.html" class="footer-a">Horarios</a></li>
+                    <li><a href="/html/404.html" class="footer-a">Acerca de Biblio</a></li>
+                </ol>
+            </div>
+            <div class="info-container">
+                <div class="info__a2">
+                    <h6>Explorar</h6>
+                    <ol>
+                        <li><a href="/html/404.html" class="footer-a">Buscador de Catalogo</a></li>
+                        <li><a href="/html/404.html" class="footer-a">Novedades y Noticias</a></li>
+                        <li><a href="/html/404.html" class="footer-a">Agenda de Eventos</a></li>
+                        <li><a href="/html/404.html" class="footer-a">Preguntas Frencuentes (FAQ)</a></li>
+                    </ol>
+                </div>
+                <div class="info__a3">
+                    <h6>Servicios para Socios</h6>
+                    <ol>
+                        <li><a href="/html/404.html" class="footer-a">Beneficios para socios</a></li>
+                        <li><a href="/html/404.html" class="footer-a">Reglamento de Prestamos y Devoluciones</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
